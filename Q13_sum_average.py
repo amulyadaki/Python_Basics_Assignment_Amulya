@@ -1,5 +1,5 @@
 # Q13 - Sum and Average Calculator
-# Calculates sum, average, max, and min of given numbers
+# Calculates sum, average, maximum, and minimum from user input numbers
 
 def main():
     try:
@@ -11,6 +11,7 @@ def main():
 
         numbers = []
 
+        # Collecting numbers from user
         for i in range(count):
             value = float(input(f"Enter number {i+1}: "))
             numbers.append(value)
@@ -20,6 +21,7 @@ def main():
         maximum = max(numbers)
         minimum = min(numbers)
 
+        # Display results
         print("\n=== RESULTS ===")
         print("Sum:", total_sum)
         print("Average:", average)
@@ -30,6 +32,7 @@ def main():
         print("Invalid input! Enter numeric values.")
     except Exception as error:
         print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

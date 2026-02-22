@@ -1,5 +1,5 @@
 # Q5 - Bill Splitter
-# Calculates restaurant bill with tax and tip
+# Calculates total bill including tax and tip and splits among people
 
 def main():
     try:
@@ -8,16 +8,23 @@ def main():
         tax_percentage = float(input("Enter tax percentage: "))
         tip_percentage = float(input("Enter tip percentage: "))
 
+        # Validation
         if number_of_people <= 0:
             print("Number of people must be greater than 0.")
             return
 
+        # Tax calculation
         tax_amount = (tax_percentage / 100) * total_bill
         bill_after_tax = total_bill + tax_amount
+
+        # Tip calculation on taxed amount
         tip_amount = (tip_percentage / 100) * bill_after_tax
         final_total = bill_after_tax + tip_amount
+
+        # Per person calculation
         amount_per_person = final_total / number_of_people
 
+        # Display
         print("\n=== BILL BREAKDOWN ===")
         print(f"Subtotal: ₹{total_bill:.2f}")
         print(f"Tax ({tax_percentage}%): ₹{tax_amount:.2f}")
@@ -30,6 +37,7 @@ def main():
         print("Invalid input! Please enter numeric values.")
     except Exception as error:
         print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

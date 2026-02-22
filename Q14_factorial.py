@@ -1,5 +1,5 @@
 # Q14 - Factorial Calculator
-# Calculates factorial with step-by-step display
+# Calculates factorial of a number with step-by-step explanation
 
 def main():
     try:
@@ -8,13 +8,15 @@ def main():
         if number < 0:
             print("Factorial not defined for negative numbers.")
             return
-        elif number == 0:
+
+        if number == 0:
             print("0! = 1")
             return
 
         factorial = 1
         steps = ""
 
+        # Multiplying numbers from n down to 1
         for i in range(number, 0, -1):
             factorial *= i
             steps += str(i)
@@ -27,6 +29,7 @@ def main():
         print("Invalid input! Enter integer only.")
     except Exception as error:
         print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

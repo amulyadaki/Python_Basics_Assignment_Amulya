@@ -4,9 +4,10 @@
 def main():
     try:
         age = int(input("Enter age: "))
-        day = input("Enter day of week: ").strip().lower()
+        day_of_week = input("Enter day of week: ").strip().lower()
         number_of_tickets = int(input("Enter number of tickets: "))
 
+        # Validate ticket count
         if number_of_tickets <= 0:
             print("Number of tickets must be greater than 0.")
             return
@@ -21,26 +22,28 @@ def main():
         else:
             base_price = 200
 
-        total_base = base_price * number_of_tickets
+        total_base_price = base_price * number_of_tickets
 
-        # Day-based discount
-        if day in ["friday", "saturday", "sunday"]:
-            discount = 0.20 * total_base
+        # Weekend discount (20%)
+        if day_of_week in ["friday", "saturday", "sunday"]:
+            discount_amount = 0.20 * total_base_price
         else:
-            discount = 0
+            discount_amount = 0
 
-        final_price = total_base - discount
+        final_amount = total_base_price - discount_amount
 
+        # Display results
         print("\n=== TICKET BILL ===")
-        print("Base Price per ticket:", base_price)
-        print("Total Base Amount:", total_base)
-        print("Discount:", discount)
-        print("Final Amount:", final_price)
+        print("Base Price per Ticket:", base_price)
+        print("Total Base Price:", total_base_price)
+        print("Discount:", discount_amount)
+        print("Final Amount:", final_amount)
 
     except ValueError:
-        print("Invalid input! Enter proper values.")
+        print("Invalid input! Please enter correct values.")
     except Exception as error:
         print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

@@ -1,29 +1,50 @@
 # Q11 - Number Pattern Printer
-# Prints different number patterns based on user choice
+# Prints different number patterns based on user choice and height
 
+# Pattern 1:
+# 1
+# 12
+# 123 ...
 def print_pattern_1(height):
     for i in range(1, height + 1):
         for j in range(1, i + 1):
             print(j, end="")
         print()
 
+
+# Pattern 2:
+# 1
+# 22
+# 333 ...
 def print_pattern_2(height):
     for i in range(1, height + 1):
         print(str(i) * i)
 
+
+# Pattern 3:
+# 54321
+# 4321 ...
 def print_pattern_3(height):
     for i in range(height, 0, -1):
         for j in range(i, 0, -1):
             print(j, end="")
         print()
 
+
+# Pattern 4:
+# 1
+# 121
+# 12321 ...
 def print_pattern_4(height):
     for i in range(1, height + 1):
+        # Increasing part
         for j in range(1, i + 1):
             print(j, end="")
+        # Decreasing part
         for j in range(i - 1, 0, -1):
             print(j, end="")
         print()
+
 
 def main():
     try:
@@ -40,6 +61,7 @@ def main():
             print("Height must be positive.")
             return
 
+        # Calling appropriate function
         if choice == 1:
             print_pattern_1(height)
         elif choice == 2:
@@ -55,6 +77,7 @@ def main():
         print("Invalid input! Enter numeric values.")
     except Exception as error:
         print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

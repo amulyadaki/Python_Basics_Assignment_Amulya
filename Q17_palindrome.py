@@ -1,9 +1,11 @@
 # Q17 - Palindrome Checker
-# Checks if word/number is palindrome
+# Checks if a word or number reads the same forward and backward
 
 def main():
     try:
         user_input = input("Enter word/number: ")
+
+        # Converting to lowercase for case-insensitive comparison
         cleaned_input = user_input.lower()
 
         reversed_input = cleaned_input[::-1]
@@ -18,6 +20,7 @@ def main():
 
     except Exception as error:
         print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@
 # Menu-driven temperature conversion program
 
 def main():
-    while True:
+    while True:  # Loop allows multiple conversions
         try:
             print("\n=== TEMPERATURE CONVERTER ===")
             print("1. Celsius to Fahrenheit")
@@ -15,43 +15,37 @@ def main():
 
             choice = int(input("Enter your choice: "))
 
+            # Exit condition
             if choice == 7:
                 print("Exiting program...")
                 break
 
-            temperature = float(input("Enter temperature value: "))
+            temperature_value = float(input("Enter temperature value: "))
 
+            # Conversion formulas
             if choice == 1:
-                result = (temperature * 9/5) + 32
-                print("Converted Temperature:", result)
-
+                result = (temperature_value * 9/5) + 32
             elif choice == 2:
-                result = (temperature - 32) * 5/9
-                print("Converted Temperature:", result)
-
+                result = (temperature_value - 32) * 5/9
             elif choice == 3:
-                result = temperature + 273.15
-                print("Converted Temperature:", result)
-
+                result = temperature_value + 273.15
             elif choice == 4:
-                result = temperature - 273.15
-                print("Converted Temperature:", result)
-
+                result = temperature_value - 273.15
             elif choice == 5:
-                result = (temperature - 32) * 5/9 + 273.15
-                print("Converted Temperature:", result)
-
+                result = (temperature_value - 32) * 5/9 + 273.15
             elif choice == 6:
-                result = (temperature - 273.15) * 9/5 + 32
-                print("Converted Temperature:", result)
-
+                result = (temperature_value - 273.15) * 9/5 + 32
             else:
                 print("Invalid choice! Please select from menu.")
+                continue
+
+            print("Converted Temperature:", result)
 
         except ValueError:
             print("Invalid input! Please enter numeric values.")
         except Exception as error:
             print("Error:", error)
+
 
 if __name__ == "__main__":
     main()

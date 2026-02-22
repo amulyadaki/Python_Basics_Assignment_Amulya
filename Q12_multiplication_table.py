@@ -1,23 +1,23 @@
-# Q12 - Multiplication Table Generator
-# Generates multiplication table for a number
+# Q12 - Multiplication Table
+# This program prints the multiplication table
+# of a given number from 1 to 10.
 
 def main():
     try:
-        number = int(input("Enter number: "))
-        end_range = int(input("Enter range (end): "))
+        number = int(input("Enter a number: "))
 
-        if end_range <= 0:
-            print("Range must be positive.")
-            return
+        print("\n=== MULTIPLICATION TABLE ===\n")
 
-        print(f"\nMultiplication Table of {number}")
-        for i in range(1, end_range + 1):
-            print(f"{number} x {i} = {number * i}")
+        # Loop runs from 1 to 10
+        for i in range(1, 11):
+            result = number * i
+            print(f"{number} x {i} = {result}")
 
     except ValueError:
-        print("Invalid input! Enter integers only.")
+        print("Invalid input! Please enter an integer.")
     except Exception as error:
-        print("Error:", error)
+        print("Unexpected Error:", error)
+
 
 if __name__ == "__main__":
     main()
