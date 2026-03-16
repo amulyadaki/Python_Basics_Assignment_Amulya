@@ -109,28 +109,6 @@ What is Artificial Intelligence?
 
 ---
 
-## Screenshots
-
-### OpenAI API Output
-![OpenAI Output](screenshots/openai_output.png)
-
-### Groq API Output
-![Groq Output](screenshots/groq_output.png)
-
-### HuggingFace API Output
-![HuggingFace Output](screenshots/huggingface_output.png)
-
-### Gemini API Output
-![Gemini Output](screenshots/gemini_output.png)
-
-### Cohere API Output
-![Cohere Output](screenshots/cohere_output.png)
-
-### Ollama Output
-![Ollama Output](screenshots/ollama_output.png)
-
-### Multi API Query Output
-![Multi API Output](screenshots/multiapiquery_output.png)
 ## Technologies Used
 
 * Python
