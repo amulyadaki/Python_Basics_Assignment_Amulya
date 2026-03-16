@@ -19,6 +19,7 @@ The following AI APIs were integrated:
 * Google Gemini API
 * Cohere API
 * Ollama (Local LLM)
+* Multi API Query
 
 Each API was tested with a sample prompt and the response was displayed in the terminal.
 
@@ -45,7 +46,9 @@ ai-api-integration
     ├── huggingface_output.png
     ├── gemini_output.png
     ├── cohere_output.png
-    └── ollama_output.png
+    ├── ollama_output.png
+    └── multiapiquery_output.png
+
 ```
 
 ---
@@ -109,31 +112,25 @@ What is Artificial Intelligence?
 ## Screenshots
 
 ### OpenAI API Output
-
 ![OpenAI Output](screenshots/openai_output.png)
 
 ### Groq API Output
-
 ![Groq Output](screenshots/groq_output.png)
 
 ### HuggingFace API Output
-
 ![HuggingFace Output](screenshots/huggingface_output.png)
 
 ### Gemini API Output
-
 ![Gemini Output](screenshots/gemini_output.png)
 
 ### Cohere API Output
-
 ![Cohere Output](screenshots/cohere_output.png)
 
 ### Ollama Output
-
 ![Ollama Output](screenshots/ollama_output.png)
 
----
-
+### Multi API Query Output
+![Multi API Output](screenshots/multiapiquery_output.png)
 ## Technologies Used
 
 * Python
